@@ -1,35 +1,44 @@
-import * as React from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import logo from "../images/logo.svg"
+import iconMenu from "../images/iconMenu.svg"
+import iconClose from "../images/iconClose.svg"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = () =>{ 
+  const [MenuChanged, setMenuChanged] = useState(false)
+return(
+  <>
+  <header>
+    <div>
+    <img 
+    src={logo} alt='Logo'/>
+    <img 
+    className='MenuIcon'
+    onClick={()=> setMenuChanged(!MenuChanged)}
+    src={MenuChanged? iconClose :iconMenu} 
+    alt='Menu'/>
+    <nav className='HeaderNav'>
+      <Link>Home</Link>
+      <Link>About</Link>
+      <Link>Contact</Link>
+      <Link>Blog</Link>
+      <Link>Carrers</Link>
+    </nav>
+    <button className='ButtonStyle'>Request Invite</button>
     </div>
   </header>
-)
+  <div className={MenuChanged ?'MenuMovil Open' :'MenuMovil'}> 
+  <div>
+    <Link>Home</Link>
+    <Link>About</Link>
+    <Link>Contact</Link>
+    <Link>Blog</Link>
+    <Link>Carrers</Link>
+    </div>
+  </div>
+  </>
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

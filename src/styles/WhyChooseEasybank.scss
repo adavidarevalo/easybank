@@ -1,0 +1,21 @@
+.ChooseContainer{
+    background: #F3F4F6;
+    padding: 50px 0px;
+    margin-block: 50px;
+    text-align: center;
+    p{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 600px;
+    }
+    .FlexContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+.ChooseElement{
+    margin-block: 40px;
+    max-width: 300px;
+}

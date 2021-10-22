@@ -1,0 +1,50 @@
+.LatestArticlesContainer{
+    h2{
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    .ConatinerFlex{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .ElementContainer{
+            margin: 50px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.055);
+            max-width: 300px;
+            img{
+                width: 100%;
+                border-radius: 5px;
+            }
+            div{
+                width: 90%;
+                margin: 0 auto;
+                padding: 0px 10px 20px 10px;
+                p{
+                    margin: 0px;
+                }
+                p:first-Child{
+                    font-size: 1rem;
+                }
+                h3{
+                    font-size: 1.3rem;
+                    margin-block: 20px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    &:hover,
+                    &:active{
+                        color: hsl(136, 65%, 51%);
+                    }
+                }
+                p:last-child{
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}
