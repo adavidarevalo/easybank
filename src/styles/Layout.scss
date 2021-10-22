@@ -130,7 +130,7 @@ footer{
                     margin-bottom: 15px;
                     text-align: center;
                     &:hover{
-                        border-bottom: 2px solid hsl(136, 65%, 51%);
+                        color: hsl(136, 65%, 51%);
                     }
                 }
             }
@@ -161,6 +161,9 @@ footer{
             display: flex;
             align-items: center;
             justify-content: space-between;
+            .ContainerFlex{
+              margin: 0px;
+            }
         }
     }
 }
