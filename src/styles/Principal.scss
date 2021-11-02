@@ -3,6 +3,7 @@
     background-image: url("../images/bgMobile.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    animation: fadeInRight 1s both;
     img {
       width: 100%;
     }
@@ -12,6 +13,7 @@
     width: 90%;
     margin: 0 auto;
     max-width: 550px;
+    animation: fadeInLeft 1s both;
     h2 {
       font-size: 2rem;
       letter-spacing: 1px;
@@ -45,3 +47,23 @@
     }
   }
 }
+@keyframes fadeInLeft {
+  0% {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+  opacity: 1;
+  transform: none;
+  }
+  } 
+  @keyframes fadeInRight {
+    0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    transform: none;
+    }
+    } 
